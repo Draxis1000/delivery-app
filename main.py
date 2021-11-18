@@ -13,11 +13,11 @@ Your selection: """
 
 def prompt_new_entry():
     entry_id = input("Enter ID: ")
-    entry_name = input("Enter name of what: ")
-    entry_dateDelivery = input("Enter delivery date: ")
-    entry_time = input("Enter delivery time: ")
-    entry_paymentMode = input("Enter payment mode used: ")
-    entry_contactNum = input("Enter contact number: ")
+    entry_name = input("Enter Order: ")
+    entry_dateDelivery = input("Enter Date of Delivery: ")
+    entry_time = input("Enter Time of Delivery: ")
+    entry_paymentMode = input("Enter Mode of Payment: ")
+    entry_contactNum = input("Enter Contact Number: ")
     add_entry(entry_id, entry_name, entry_dateDelivery, entry_time, entry_paymentMode, entry_contactNum)
 
 
@@ -27,7 +27,7 @@ def view_entries(entries):
         print(f"{entry[0]}\n{entry[1]}\n {entry[2]} - {entry[3]}\n {entry[4]}\n {entry[5]}")
 
 def prompt_del_entry():
-    id_for_deletion = input("Enter ID needed to be deleted: ")
+    id_for_deletion = input("Enter ID that needs to be deleted: ")
     del_entry(id_for_deletion)
 
 
@@ -43,7 +43,7 @@ while user_input != "4":
     elif user_input =="3":
         prompt_del_entry()
     else:
-        print("Invalid options, please try again")
+        print("Invalid options! Please try again.")
 
     user_input = input(menu)
 
